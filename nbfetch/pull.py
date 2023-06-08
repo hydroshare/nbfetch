@@ -57,7 +57,7 @@ class HSPuller:
 
         downloaded_zip = self.hs.resource(self.id).download(save_path=download_dir)
         with zipfile.ZipFile(downloaded_zip, 'r') as zip_ref:
-            zip_ref.extractall(download_dir)
+            zip_ref.extractall(f'{download_dir}/{self.id}')
         os.remove(downloaded_zip)
 
         
