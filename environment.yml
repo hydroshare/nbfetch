@@ -30,7 +30,9 @@ dependencies:
     - nbserverproxy==0.8.8
     - notebook==6.4.6
     - requests-cache==0.9.5
-    - tornado==6.1
+    # had to upgrade tornado to enable overwrite of res files
+    # - tornado==6.1
+    - tornado==6.3.2
     - widgetsnbextension==3.6.1
     # - _libgcc_mutex==0.1
     # - _openmp_mutex==4.5
