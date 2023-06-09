@@ -22,6 +22,8 @@ dependencies:
     - jupyterlab_pygments==0.1.2
     - jupyterlab_server==2.10.3
     - jupyterlab_widgets==1.1.1
+    # version of mistune and nbconvert have to be harmonized
+    # https://github.com/jupyter/nbconvert/issues/1864
     - mistune==0.8.4
     - nbclassic==0.3.4
     - nbclient==0.5.9
