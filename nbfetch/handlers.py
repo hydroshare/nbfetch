@@ -24,6 +24,7 @@ from typing import Optional, Tuple
 
 # probably need a varify=False for the hs client session? ssl cert...
 host = "www2-hydroshare.edc.renci.org"
+# host = "beta.hydroshare.org"
 protocol = "https"
 port = 443
 
