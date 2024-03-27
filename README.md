@@ -56,7 +56,7 @@ pip install --upgrade pip
 pip install -e .
 
 # install hsclient fork
-pip install -e /hsclient
+pip install -e hsclient
 
 # enable jupyter_server extension
 jupyter server extension enable --py nbfetch
