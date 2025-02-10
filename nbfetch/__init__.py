@@ -1,13 +1,13 @@
 from .version import __version__
 from .handlers import HSLoginHandler, SyncHandler, HSyncHandler, UIHandler, HSHandler
-from notebook.utils import url_path_join
+from jupyter_server.utils import url_path_join
 from tornado.web import StaticFileHandler
 import os
 
 import jupyter_server
 from jupyter_server.extension.application import ExtensionApp
-from notebook import DEFAULT_TEMPLATE_PATH_LIST
-from notebook.notebookapp import DEFAULT_STATIC_FILES_PATH
+from jupyter_server import DEFAULT_TEMPLATE_PATH_LIST
+from jupyter_server import DEFAULT_STATIC_FILES_PATH
 import jinja2
 import gettext
 
