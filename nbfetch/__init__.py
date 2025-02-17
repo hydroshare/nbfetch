@@ -1,12 +1,13 @@
 from .version import __version__
 from .handlers import HSLoginHandler, SyncHandler, HSyncHandler, UIHandler, HSHandler
-from notebook.utils import url_path_join
+from jupyter_server.utils import url_path_join
 from tornado.web import StaticFileHandler
 import os
 
 import jupyter_server
 from jupyter_server.extension.application import ExtensionApp
-from notebook import DEFAULT_STATIC_FILES_PATH, DEFAULT_TEMPLATE_PATH_LIST
+from jupyter_server import DEFAULT_TEMPLATE_PATH_LIST
+from jupyter_server import DEFAULT_STATIC_FILES_PATH
 import jinja2
 import gettext
 
@@ -21,6 +22,8 @@ class NbFetchApp(ExtensionApp):
     load_other_extensions = True
     file_url_prefix = "/"
 
+    # Default static files path changed in 6.5.0:
+    # https://github.com/jupyter/notebook/releases/tag/v6.5.0
     # Local path to static files directory.
     static_paths = [
         os.path.join(HERE, "static"),
