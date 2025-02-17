@@ -62,7 +62,7 @@ jupyter server extension enable --py nbfetch
 jupyter lab
 
 # to test fetching, visit the `/nbfetch` url, for example:
-http://127.0.0.1:8888/nbfetch/hs-pull?id=432d503a507e493581d25beb3379471a&res_id=432d503a507e493581d25beb3379471a
+http://127.0.0.1:8888/nbfetch/hs-pull?id=96310f82dd5247ba8201955750093923&res_id=96310f82dd5247ba8201955750093923
 ```
 
 `nbfetch` requires HydroShare user authentication (username, password) or authorization (OAuth2) to
