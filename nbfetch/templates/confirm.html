@@ -58,8 +58,14 @@
       });
 
       $('#confirmModal').on('hide.bs.modal', function (e) {
-        // get the id of the button that was clicked
-        var res = $(document.activeElement).attr('id');
+        var res = null;
+        if (e.relatedTarget) {
+          res = $(e.relatedTarget).attr('id');
+        }
+        if (res !== 'overwrite' && res !== 'goto') {
+          // fallback: try to find the last focused button in the modal
+          res = $('#confirmModal .modal-footer button:focus').attr('id');
+        }
         // redirect to calling url with "goto" or "overwrite" parameter
         window.location.replace(window.location.href + '&' + res + '=1');
       });
