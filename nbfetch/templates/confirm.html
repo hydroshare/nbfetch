@@ -57,8 +57,7 @@
         }
       });
 
-      $('#confirmModal').on('hidden.bs.modal', function (e) {
-        // https://getbootstrap.com/docs/3.4/javascript/#modals-events
+      $('#confirmModal').on('hide.bs.modal', function (e) {
         // get the id of the button that was clicked
         var res = $(document.activeElement).attr('id');
         // redirect to calling url with "goto" or "overwrite" parameter
